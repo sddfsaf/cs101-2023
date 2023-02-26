@@ -3,9 +3,9 @@
 
 int main()
 {
-    char a[]="AABBBCCddd";
+    char a[]="AABBBCCCCddd";
     int k =1;
-    for(int i =0;i <10;i++){
+    for(int i =0;i <12;i++){
         if (a[i] ==a[i+1]){
             k++;
         }else{
