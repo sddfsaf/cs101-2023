@@ -3,9 +3,7 @@
 #include <stdio.h>
 
 
-void
-find_num (char a[])
-{
+void find_num (char a[]){
   int l = 6;
   int ne = 1;
   int sum = 0;
