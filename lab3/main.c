@@ -9,11 +9,11 @@ typedef struct person{
 int main()
 {
    FILE* rfp = fopen("person.bin", "w+");
-   person_t p[5] = { {1, "IU", "Iee"},
-                     {2, "IUU", "Iee"},
-                     {3, "IUUU", "Iee"},
-                     {4, "IUUUU", "Iee"},
-                     {5, "IUUUUU", "Iee"},
+   person_t p[5] = { {1, "IU", "Lee"},
+                     {2, "IUU", "Lee"},
+                     {3, "IUUU", "Lee"},
+                     {4, "IUUUU", "Lee"},
+                     {5, "IUUUUU", "Lee"},
    };
    for (int i =0;i<5;i++){
        fwrite(p+i, sizeof(person_t),1,rfp);
