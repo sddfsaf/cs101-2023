@@ -37,6 +37,8 @@ int main()
     int a,b,c,d,e;
     printf("請輸入中獎號碼");
     scanf("%d%d%d",&a,&b,&c);
+    fread( &p, sizeof(read), 1, lfp);
+    fseek(lfp,0,SEEK_SET);
     for (d =0;d <5; d++){
         for ( e =0; e<7; e++){
             if (a ||b ||c ==p->lotto_set[d][e]){
@@ -44,16 +46,14 @@ int main()
                     printf("彩券 No.%d\n",p->receipt_id);
                     printf("售出時間：%s\n",p->receipt_time);
                     printf("彩票號碼");
-                    for (d =0;d <5; d++){
-                        for ( e =0; e<7; e++){
-                          printf("%d ",p->lotto_set[d][e]);  
-                        };
-                    };
+                    for ( int g =0; g <7; g++){
+                        printf("%d ",p->lotto_set[d][e]);
+                    }
                     printf("\n");
                 };
             };
         };
-    };
+    }
     };
     if ( l<6 &&l>=1){
     sprintf(filename,"lotto[00000%d].txt", i);
