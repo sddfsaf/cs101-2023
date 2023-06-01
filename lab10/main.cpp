@@ -1,4 +1,5 @@
 
+
 #include <string>
 #include <iostream>
 #include <fstream>
@@ -19,20 +20,22 @@ class ReadClass
     
     public:
         string a;
-        string save;
         int i =0;
         ifstream in;
         
         void showClass (){
             in.open("main.cpp");
             while (getline (in, a)){
-            while (a.find("class")){
+                
+            if (a.find("class")){
                 i++;
             }
         }
+        in.close();
         cout << i <<"class in main.cpp";
+        in.open("main.cpp");
         while (getline (in, a)){
-            while (a.find("class")){
+            if (a.find("class")){
                 cout << a << endl;
             }
         }
